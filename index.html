@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/logo1.png">
+    <script src="./assets/style.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>New Football</title>
+    <style>
+        .vertical {
+            flex-basis: 23.8%;
+            position: relative;
+            margin-bottom: 40px;
+            width: 100%;
+            height: 260px;
+            border-radius: 3px;
+            box-shadow: 0 0px 0px 0 rgb(0 0 0 / 20%), 0 1px 4px 0 rgb(0 0 0 / 19%);
+        }
+
+        .gradient__avatar {
+            position: relative;
+            width: 100%;
+            height: 250px;
+            cursor: pointer;
+        }
+
+        .gradient__avatar::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 330px;
+            border-radius: 5px;
+            background-image: linear-gradient(180deg, transparent 0 40%, #FFF 80% 100%);
+        }
+        .gradient__avatars::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 330px;
+            border-radius: 5px;
+            background-image: linear-gradient(180deg, transparent 0 25%, #FFF 89% 100%);
+        }
+        /*.col:hover{*/
+        /*    opacity: 0.8;*/
+        /*}*/
+    </style>
+</head>
+
+<body>
+    <!-- <div class="container"> -->
+    <div style="background-color: rgb(248, 247, 247);">
+        <div class="row">
+            <div class="col">
+                <div class="d-flex" style="margin: 15px 45px;">
+                    <img style="width: 40px; height: 45px;" src="images/FIFA_World_Cup_2022.png" alt="">
+                    <p style="font-family: cursive;padding: 10px 0; color: #9B072E" class="mb-1 mx-2">New FootBall</p>
+                </div>
+            </div>
+            <div class="col-7">
+                <div style="height: 55px;">
+                    <div class="input-group pt-2 mb-3">
+                        <input type="text" class="form-control" placeholder="Search on web"
+                            aria-label="Recipient's username" aria-describedby="basic-addon2"
+                            style="border-radius: 25px 0 0 25px;">
+                        <div class="input-group-append">
+                            <span class="input-group-text" id="basic-addon2" style="border-radius: 0 25px 25px 0; height: 50px; width: 80px;">
+                                <i style="margin: 0 auto; font-size: 20px;" class="fa fa-search"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="d-flex justify-content-end" style="margin: 20px 69px; font-size: 25px;">
+                    <i class="fa fa-user-plus"></i>
+                    <i class="fa fa-microphone mx-3"></i>
+                    <i class="fa fa-gear"></i>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-evenly">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                    <div class="collapse navbar-collapse" id="navbarText">
+                        <ul class="navbar-nav me-auto ">
+                            <span class="navbar-toggler-icon" style="margin: 9px 15px;"></span>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item" style="margin: 0 5px;">
+                                <a class="nav-link active" aria-current="page" href="#">Sprost</a>
+                            </li>
+                            <p style="margin: 7px 5px;">|</p>
+                            <li class="nav-item" style="margin: 0 4px;">
+                                <a class="nav-link active" aria-current="page" href="#"><b>Football</b></a>
+                            </li>
+                            <li class="nav-item" style="margin: 0 4px;">
+                                <a class="nav-link active" aria-current="page" href="#">World Cup</a>
+                            </li>
+                            <li class="nav-item" style="margin: 0 4px;">
+                                <a class="nav-link active" aria-current="page" href="#">Premier League</a>
+                            </li>
+                            <li class="nav-item" style="margin: 0 4px;">
+                                <a class="nav-link active" aria-current="page" href="#">Champions League</a>
+                            </li>
+                            <li class="nav-item" style="margin: 0 4px;">
+                                <a class="nav-link active" aria-current="page" href="#">La Liga</a>
+                            </li>
+                            <li class="nav-item" style="margin: 0 4px;">
+                                <a class="nav-link active" aria-current="page" href="#">Serie A</a>
+                            </li>
+                            <li class="nav-item" style="margin: 0 4px;">
+                                <a class="nav-link active" aria-current="page" href="#">Europa League</a>
+                            </li>
+                            <li class="nav-item" style="margin: 0 4px;">
+                                <a class="nav-link active" aria-current="page" href="#">V-League</a>
+                            </li>
+                            <li class="nav-item" style="margin: 0 4px;">
+                                <a class="nav-link active" aria-current="page" href="#">...</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="d-flex" style="margin-right: 20px;">
+                <button style="border-radius: 20px; height: 38px; width: 165px; margin: 10px 0;" type="button"
+                    class="btn btn-outline-secondary"><i class="fa fa-star"></i> Personalized</button>
+            </div>
+        </div>
+    </div>
+    <div style="background-image: url('./images/backgroud.png'); height: 100%">
+        <div class="matchup-content d-flex justify-content-center" style=" height: 120px; margin-top: 15px;">
+            <div class="mx-2 d-flex justify-content-between" style="border-radius: 6px; height: 80px; background-color: #fff;">
+                <div class="image-left">
+                    <img style="width: 50px; height: 30px; margin: 12px 15px;" src="images/16-team/Argentina.png" alt="">
+                    <p style="font-size: 12px; text-align:center">Argentina</p>
+                </div>
+                <div class="text-right">
+                    <h5 style="margin: 20px;">22:00 <br>
+                        <p style="font-size: 10px; text-align: center;">3 thg 12</p>
+                    </h5>
+                </div>
+                <div class="image-right">
+                    <img style="width: 50px; height: 30px; margin:12px 15px;" src="images/16-team/Australia.png" alt="">
+                    <p style="font-size: 12px; text-align:center">Australia</p>
+                </div>
+            </div>
+            <div class="mx-2 d-flex justify-content-between" style="border-radius: 6px; height: 80px; background-color: #fff;">
+                <div class="image-left">
+                    <img style="width: 50px; height: 30px; margin: 12px 15px;" src="images/16-team/Japan.png" alt="">
+                    <p style="font-size: 12px; text-align:center">Nhật Bản</p>
+                </div>
+                <div class="text-right">
+                    <h5 style="margin: 20px;">22:00 <br>
+                        <p style="font-size: 10px; text-align: center;">3 thg 12</p>
+                    </h5>
+                </div>
+                <div class="image-right">
+                    <img style="width: 50px; height: 30px; margin:12px 15px;" src="images/16-team/Croatia.png" alt="">
+                    <p style="font-size: 12px; text-align:center">Croatia</p>
+                </div>
+            </div>
+            <div class="mx-2 d-flex justify-content-between" style="border-radius: 6px; height: 80px; background-color: #fff;">
+                <div class="image-left">
+                    <img style="width: 50px; height: 30px; margin: 12px 15px;" src="images/16-team/Brazil.png" alt="">
+                    <p style="font-size: 12px; text-align:center">Brazil</p>
+                </div>
+                <div class="text-right">
+                    <h5 style="margin: 20px;">22:00 <br>
+                        <p style="font-size: 10px; text-align: center;">3 thg 12</p>
+                    </h5>
+                </div>
+                <div class="image-right">
+                    <img style="width: 50px; height: 30px; margin:12px 15px;" src="images/16-team/Korea.png" alt="">
+                    <p style="font-size: 12px; text-align:center">Hàn Quốc</p>
+                </div>
+            </div>
+            <div class="mx-2 d-flex justify-content-between" style="border-radius: 6px; height: 80px; background-color: #fff;">
+                <div class="image-left">
+                    <img style="width: 50px; height: 30px; margin: 12px 15px;" src="images/16-team/Brazil.png" alt="">
+                    <p style="font-size: 12px; text-align:center">Brazil</p>
+                </div>
+                <div class="text-right">
+                    <h5 style="margin: 20px;">22:00 <br>
+                        <p style="font-size: 10px; text-align: center;">3 thg 12</p>
+                    </h5>
+                </div>
+                <div class="image-right">
+                    <img style="width: 50px; height: 30px; margin:12px 15px;" src="images/16-team/Korea.png" alt="">
+                    <p style="font-size: 12px; text-align:center">Hàn Quốc</p>
+                </div>
+            </div>
+            <div class="mx-2 d-flex justify-content-between" style="border-radius: 6px; height: 80px; background-color: #fff;">
+                <div class="image-left">
+                    <img style="width: 50px; height: 30px; margin: 12px 15px;" src="images/16-team/Brazil.png" alt="">
+                    <p style="font-size: 12px; text-align:center">Brazil</p>
+                </div>
+                <div class="text-right">
+                    <h5 style="margin: 20px;">22:00 <br>
+                        <p style="font-size: 10px; text-align: center;">3 thg 12</p>
+                    </h5>
+                </div>
+                <div class="image-right">
+                    <img style="width: 50px; height: 30px; margin:12px 15px;" src="images/16-team/Korea.png" alt="">
+                    <p style="font-size: 12px; text-align:center">Hàn Quốc</p>
+                </div>
+            </div>
+            <div class="mx-2 d-flex justify-content-between" style="border-radius: 6px; height: 80px; background-color: #fff;">
+                <div class="image-left">
+                    <img style="width: 50px; height: 30px; margin: 12px 15px;" src="images/16-team/England.png" alt="">
+                    <p style="font-size: 12px; text-align:center">Anh</p>
+                </div>
+                <div class="text-right">
+                    <h5 style="margin: 20px;">22:00 <br>
+                        <p style="font-size: 10px; text-align: center;">3 thg 12</p>
+                    </h5>
+                </div>
+                <div class="image-right">
+                    <img style="width: 50px; height: 30px; margin:12px 15px;" src="images/16-team/Senegal.png" alt="">
+                    <p style="font-size: 12px; text-align:center">Senegal</p>
+                </div>
+            </div>
+            <div class="mx-2 d-flex justify-content-between" style="border-radius: 6px; height: 80px; background-color: #fff;">
+                <div class="image-left">
+                    <img style="width: 50px; height: 30px; margin: 12px 15px;" src="images/16-team/Portugal.png" alt="">
+                    <p style="font-size: 12px; text-align:center">Bồ Đào Nha</p>
+                </div>
+                <div class="text-right">
+                    <h5 style="margin: 20px;">22:00 <br>
+                        <p style="font-size: 10px; text-align: center;">3 thg 12</p>
+                    </h5>
+                </div>
+                <div class="image-right">
+                    <img style="width: 50px; height: 30px; margin:12px 15px;" src="images/16-team/Thụy Sĩ.png" alt="">
+                    <p style="font-size: 12px; text-align:center">Thụy Sĩ</p>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between mx-3">
+            <div class="main">
+                <div class="form-group has-search">
+                    <span class="fa fa-search form-control-feedback"></span>
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+            </div>
+            <!-- view details team -->
+            <div class="view-detail-team d-flex justify-content-between" style="padding-top: 15px; width: 100%">
+                <div class="form-control d-flex justify-content-between" style="border-radius: 20px; height: 38px; margin: 0 5px">
+                    <div class="d-flex justify-content-start">
+                        <img style="width: 30px" src="images/16-team/Portugal.png" alt="">
+                        <p style="margin: 0 5px">Bồ Đào Nha</p>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <i style="padding-top: 4px" class="fa fa-plus-circle"></i>
+                    </div>
+                </div>
+                <div class="form-control d-flex justify-content-between" style="border-radius: 20px; height: 38px; margin: 0 5px">
+                    <div class="d-flex justify-content-start">
+                        <img style="width: 30px" src="images/16-team/Korea.png" alt="">
+                        <p style="margin: 0 5px">Hàn Quốc</p>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <i style="padding-top: 4px" class="fa fa-plus-circle"></i>
+                    </div>
+                </div>
+                <div class="form-control d-flex justify-content-between" style="border-radius: 20px; height: 38px; margin: 0 5px">
+                    <div class="d-flex justify-content-start">
+                        <img style="width: 30px" src="images/16-team/Tây%20Ban%20Nha.png" alt="">
+                        <p style="margin: 0 5px">Tây Ban Nha</p>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <i style="padding-top: 4px" class="fa fa-plus-circle"></i>
+                    </div>
+                </div>
+                <div class="form-control d-flex justify-content-between" style="border-radius: 20px; height: 38px; margin: 0 5px">
+                    <div class="d-flex justify-content-start">
+                        <img style="width: 30px" src="images/16-team/Argentina.png" alt="">
+                        <p style="margin: 0 5px">Argentina</p>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <i style="padding-top: 4px" class="fa fa-plus-circle"></i>
+                    </div>
+                </div>
+                <div class="form-control d-flex justify-content-between" style="border-radius: 20px; height: 38px; margin: 0 5px">
+                    <div class="d-flex justify-content-start">
+                        <img style="width: 30px" src="images/16-team/Brazil.png" alt="">
+                        <p style="margin: 0 5px">Brazil</p>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <i style="padding-top: 4px" class="fa fa-plus-circle"></i>
+                    </div>
+                </div>
+                <div class="form-control d-flex justify-content-between" style="border-radius: 20px; height: 38px; margin: 0 5px">
+                    <div class="d-flex justify-content-start">
+                        <img style="width: 30px" src="images/16-team/Senegal.png" alt="">
+                        <p style="margin: 0 5px">Senegal</p>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <i style="padding-top: 4px" class="fa fa-plus-circle"></i>
+                    </div>
+                </div>
+                <div class="form-control d-flex justify-content-between" style="border-radius: 20px; height: 38px; margin: 0 5px">
+                    <div class="d-flex justify-content-start">
+                        <img style="width: 30px" src="images/16-team/Portugal.png" alt="">
+                        <p style="margin: 0 5px">Bồ Đào Nha</p>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <i style="padding-top: 4px" class="fa fa-plus-circle"></i>
+                    </div>
+                </div>
+                <div class="form-control d-flex justify-content-between" style="border-radius: 20px; height: 38px; margin: 0 5px">
+                    <div class="d-flex justify-content-start">
+                        <img style="width: 30px" src="images/16-team/Korea.png" alt="">
+                        <p style="margin: 0 5px">Hàn Quốc</p>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <i style="padding-top: 4px" class="fa fa-plus-circle"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex mx-3">
+            <img style="width: 90px" src="./images/FIFA_World_Cup_2022.png" alt="">
+            <div style="padding: 20px">
+                <h3 style="color: #fff">Phát Sóng World Cup</h3>
+                <button style="border-radius: 20px; font-size: 10px" type="button" class="btn btn-primary"><i style="margin-right: 5px" class="fa fa-check"></i></i>Đang theo dõi</button>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse" id="navbar-Text">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a style="color: #fff" class="nav-link active" aria-current="page" href="#">Trang Chủ</a>
+                        </li>
+                        <li class="nav-item" style="font-weight: bold;">
+                            <a style="color: #fff" class="nav-link active" aria-current="page" href="#">Điểm số và lịch biểu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a  style="color: #fff" class="nav-link active" aria-current="page" href="#">Bảng Đấu</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="d-flex mx-2">
+            <button style="border: 2px solid; border-radius: 20px; height: 38px; margin: 0 3px" type="button" class="btn btn-outline-primary">1 thg 12</button>
+            <button style="border: 2px solid; border-radius: 20px; height: 38px; margin: 0 3px" type="button" class="btn btn-outline-secondary">2 thg 12</button>
+            <button style="border: 2px solid; border-radius: 20px; height: 38px; margin: 0 3px" type="button" class="btn btn-outline-success">3 thg 12</button>
+            <button style="border: 2px solid; border-radius: 20px; height: 38px; margin: 0 3px" type="button" class="btn btn-outline-danger">4 thg 12</button>
+            <button style="border: 2px solid; border-radius: 20px; height: 38px; margin: 0 3px" type="button" class="btn btn-outline-warning">5 thg 12</button>
+            <button style="border: 2px solid;border-radius: 20px; height: 38px; margin: 0 3px" type="button" class="btn btn-outline-info">6 thg 12</button>
+            <button style="border: 2px solid;border-radius: 20px; height: 38px; margin: 0 3px" type="button" class="btn btn-outline-light">7 thg 12</button>
+            <button style="border: 2px solid;border-radius: 20px; height: 38px; margin: 0 3px" type="button" class="btn btn-outline-dark">8 thg 12</button>
+            <button style="border: 2px solid;border-radius: 20px; height: 38px; margin: 0 3px" type="button" class="btn btn-outline-secondary">9 thg 12</button>
+            <button style="border: 2px solid;border-radius: 20px; height: 38px; margin: 0 3px" type="button" class="btn btn-outline-success">10 thg 12</button>
+            <button style="border: 2px solid;border-radius: 20px; height: 38px; margin: 0 3px" type="button" class="btn btn-outline-danger">12 thg 12</button>
+            <button style="border: 2px solid;border-radius: 20px; height: 38px; margin: 0 3px" type="button" class="btn btn-outline-warning">14 thg 12</button>
+            <button style="border: 2px solid;border-radius: 20px; height: 38px; margin: 0 3px" type="button" class="btn btn-outline-primary">16 thg 12</button>
+            <button style="border: 2px solid; border-radius: 20px; height: 38px; margin: 0 3px" type="button" class="btn btn-outline-danger">18 thg 12</button>
+            <button style="border: 2px solid; border-radius: 20px; height: 38px; margin: 0 3px" type="button" class="btn btn-outline-warning">20 thg 12</button>
+            <button style="border: 2px solid;border-radius: 20px; height: 38px; margin: 0 3px" type="button" class="btn btn-outline-info">22 thg 12</button>
+            <button style="border: 2px solid;border-radius: 20px; height: 38px; margin: 0 3px" type="button" class="btn btn-outline-light">24 thg 12</button>
+            <button style="border: 2px solid;border-radius: 20px; height: 38px; margin: 0 3px" type="button" class="btn btn-outline-dark">26 thg 12</button>
+            <button style="border: 2px solid; border-radius: 20px; height: 38px; margin: 0 3px" type="button" class="btn btn-outline-danger">28 thg 12</button>
+        </div> 
+<!--        Lịch       -->
+        <div class="row mx-3 mt-5">
+            <!-- Điểm số và lịch biểu -->
+            <div class="col" style="border: 1px solid #ccccccd4; border-radius: 5px; height: 460px; background-color: #ccccccd4; margin-right: 10px">
+                <h6 style="padding-top: 15px;">Điểm số và lịch biểu</h6>
+                <div class="" style="margin-bottom: 40px">
+                    <div class="col" style="border: 1px solid #ccccccd4; border-radius: 5px; height: 70px; background-color: #ffffff; margin-bottom: 5px">
+                        <div class="d-flex justify-content-between mx-5" style="text-align: center; margin: 10px 15px">
+                            <div class="">
+                                <img src="images/16-team/Morocco.png" alt="" style="width: 50px; height: 30px;"/>
+                                <p style="font-size: 12px; font-weight: bold">Morocco</p>
+                            </div>
+                            <div style="margin: 0 40px">
+                                <h5 style="margin: 0 10px">22:00</h5>
+                                <p style="font-size: 13px;">10 thg 12</p>
+                            </div>
+                            <div>
+                                <img src="images/16-team/Portugal.png" alt="" style="width: 50px; height: 30px;"/>
+                                <p style="font-size: 12px; font-weight: bold">Bồ Đào Nha</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col" style="border: 1px solid #ccccccd4; border-radius: 5px; height: 70px; background-color: #ffffff; margin-bottom: 5px">
+                        <div class="d-flex justify-content-between mx-5" style="text-align: center; margin: 10px 15px">
+                            <div>
+                                <img src="images/16-team/Hà%20Lan.png" alt="" style="width: 50px; height: 30px;"/>
+                                <p style="font-size: 12px; font-weight: bold">Hà Lan</p>
+                            </div>
+                            <div style="margin: 0 40px">
+                                <h5 style="margin: 0 10px">2:00</h5>
+                                <p style="font-size: 13px;">10 thg 12</p>
+                            </div>
+                            <div>
+                                <img src="images/16-team/Argentina.png" alt="" style="width: 50px; height: 30px;"/>
+                                <p style="font-size: 12px; font-weight: bold">Argentina</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col" style="border: 1px solid #ccccccd4; border-radius: 5px; height: 70px; background-color: #ffffff; margin-bottom: 5px">
+                        <div class="d-flex justify-content-between mx-5" style="text-align: center; margin: 10px 15px">
+                            <div>
+                                <img src="images/16-team/England.png" alt="" style="width: 50px; height: 30px;"/>
+                                <p style="font-size: 12px; font-weight: bold">Anh</p>
+                            </div>
+                            <div style="margin: 0 40px">
+                                <h5 style="margin: 0 10px">2:00</h5>
+                                <p style="font-size: 13px;">11 thg 12</p>
+                            </div>
+                            <div>
+                                <img src="images/16-team/France.png" alt="" style="width: 50px; height: 30px;"/>
+                                <p style="font-size: 12px; font-weight: bold">Pháp</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col" style="border: 1px solid #ccccccd4; border-radius: 5px; height: 70px; background-color: #ffffff; margin-bottom: 5px">
+                        <div class="d-flex justify-content-between mx-5" style="text-align: center; margin: 10px 15px">
+                            <div>
+                                <img src="images/16-team/Argentina.png" alt="" style="width: 50px; height: 30px;"/>
+                                <p style="font-size: 12px; font-weight: bold">Argentina</p>
+                            </div>
+                            <div style="margin: 0 40px">
+                                <h5 style="margin: 0 10px">2:00</h5>
+                                <p style="font-size: 13px;">14 thg 12</p>
+                            </div>
+                            <div>
+                                <img src="images/16-team/Croatia.png" alt="" style="width: 50px; height: 30px;"/>
+                                <p style="font-size: 12px; font-weight: bold">Croatia</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col" style="border: 1px solid #ccccccd4; border-radius: 5px; height: 70px; background-color: #ffffff; margin-bottom: 5px">
+                        <div class="d-flex justify-content-between mx-5" style="text-align: center; margin: 10px 15px">
+                            <div>
+                                <img src="images/16-team/Portugal.png" alt="" style="width: 50px; height: 30px;"/>
+                                <p style="font-size: 12px; font-weight: bold">Bồ Đào Nha</p>
+                            </div>
+                            <div style="margin: 0 40px">
+                                <h5 style="margin: 0 10px">2:00</h5>
+                                <p style="font-size: 13px;">15 thg 12</p>
+                            </div>
+                            <div>
+                                <img src="images/16-team/France.png" alt="" style="width: 50px; height: 30px;"/>
+                                <p style="font-size: 12px; font-weight: bold">Pháp</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide -->
+            <div class="col-6" style="border-radius: 5px; height: 460px; background-color: #ccccccd4; padding: 0; margin-right: 10px">
+                <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel" style="width: 100%; height: 450px">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner" style="height: 460px">
+                        <div class="carousel-item active">
+                            <img src="./images/new/32_đội_tuyển_dự_World_Cup_2022_tại_Qatar_(1).jpg" class="d-block" alt="..." style="width: 100%; height: 460px; border-radius: 5px;">
+                            <div class="carousel-caption d-none d-md-block" style="height: 100px">
+                                <h5>World Cup 2022</h5>
+                                <p>32 đội tuyển tham dự World Cup 2022 tại Qatar</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item" >
+                            <img src="./images/new/all.png" class="d-block" alt="..." style="width: 100%; height: 460px ;border-radius: 5px;">
+                            <div class="carousel-caption d-none d-md-block" style="height: 100px">
+                                <h5>Second slide label</h5>
+                                <p>Some representative placeholder content for the second slide.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./images/new/World-Cup.jpeg" class="d-block" alt="..."style="width: 100%; height: 460px; border-radius: 5px;">
+                            <div class="carousel-caption d-none d-md-block" style="height: 100px">
+                                <h5>Third slide label</h5>
+                                <p>Some representative placeholder content for the third slide.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <!-- Tin tức -->
+            <div class="col" style="height: 460px; padding: 0">
+                <div class="col" style="border: 1px solid #ccccccd4; border-radius: 5px; height: 146px; background-color: #ccccccd4; margin-bottom: 10px">
+                    <div class="d-flex mx-3 mt-3">
+                        <p>Ronaldo vào đường hầm khi đồng đội đang ăn mừng chiến thắng</p>
+                        <img src="images/new/ronaldo-messi-293.jpg" alt="" style="width: 84px; height: 84px; margin-left: 30px; border-radius: 5px" />
+                    </div>
+                </div>
+                <div class="col" style="border: 1px solid #ccccccd4; border-radius: 5px; height: 146px; background-color: #ccccccd4; margin-bottom: 10px">
+                    <div class="d-flex mx-3 mt-3">
+                        <p>Ronaldo vào đường hầm khi đồng đội đang ăn mừng chiến thắng</p>
+                        <img src="images/new/ronaldo-messi-293.jpg" alt="" style="width: 84px; height: 84px; margin-left: 30px; border-radius: 5px" />
+                    </div>
+                </div>
+                <div class="col" style="border: 1px solid #ccccccd4; border-radius: 5px; height: 146px; background-color: #ccccccd4">
+                    <div class="d-flex mx-3 mt-3">
+                        <p>Ronaldo vào đường hầm khi đồng đội đang ăn mừng chiến thắng</p>
+                        <img src="images/new/ronaldo-messi-293.jpg" alt="" style="width: 84px; height: 84px; margin-left: 30px; border-radius: 5px" />
+                    </div>
+                </div>
+            </div>
+        </div>
+<!--        bảng đấu-->
+        <div class="row mx-3" style="padding-top: 30px">
+            <div class="col d-flex justify-content-between" style="background-color: #ebf8ebab; border: 1px solid #aaaaaa; border-radius: 5px; margin-right: 10px">
+                <div class="d-flex">
+                    <img style="width: 100px; height: 60px; margin: 40px 0" src="./images/16-team/Portugal.png" alt="">
+                    <div style="padding: 20px 10px">
+                        <h5 style="margin: 0">Portugal</h5>
+                        <p style="margin: 0">2-0-1</p>
+                        <i class="fa fa-plus-circle"></i>
+                    </div>
+                </div>
+                <div class="text-center" style="padding-top: 22px; margin-bottom: 40px">
+                    <p style="margin: 0">10 thg 12 + 7,04</p>
+                    <h4>22:00</h4>
+                    <p style="font-size: 12px">23^c | Ahmed bin Ali Stadium, Al Rayyan</p>
+                    <button style="border-radius: 20px; width: 190px; font-size: 13px" type="button" class="btn btn-outline-secondary">Xem thêm trận đấu chi tiết</button>
+                </div>
+                <div class="d-flex">
+                    <div class="text-end" style="padding: 20px 10px">
+                        <h5 style="margin: 0">Morocco</h5>
+                        <p style="margin: 0">2-1-0</p>
+                        <i class="fa fa-plus-circle"></i>
+                    </div>
+                    <img style="width: 100px; height: 60px; margin: 40px 0" src="./images/16-team/Morocco.png" alt="">
+                </div>
+            </div>
+            <div class="col d-flex justify-content-between" style="background-color: #ebf8ebab; border: 1px solid #aaaaaa; border-radius: 5px;">
+                <div class="d-flex">
+                    <img style="width: 100px; height: 60px; margin: 40px 0" src="./images/16-team/England.png" alt="">
+                    <div style="padding: 20px 10px">
+                        <h5 style="margin: 0">England</h5>
+                        <p style="margin: 0">2-1-0</p>
+                        <i class="fa fa-plus-circle"></i>
+                    </div>
+                </div>
+                <div class="text-center" style="padding-top: 22px; margin-bottom: 40px">
+                    <p style="margin: 0">11 thg 12 - 7,04</p>
+                    <h4>2:00</h4>
+                    <p style="font-size: 12px">23^c | Ahmed bin Ali Stadium, Al Rayyan</p>
+                    <button style="border-radius: 20px; width: 190px; font-size: 13px" type="button" class="btn btn-outline-secondary">Xem thêm trận đấu chi tiết</button>
+                </div>
+                <div class="d-flex">
+                    <div class="text-right" style="padding: 20px 10px">
+                        <h5 style="margin: 0">France</h5>
+                        <p style="margin: 0">2-0-1</p>
+                        <i class="fa fa-plus-circle"></i>
+                    </div>
+                    <img style="width: 100px; height: 60px; margin: 40px 0" src="./images/16-team/France.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="video"></div>
+    <!--tin tuc-->
+        <div class="new mx-5" style="padding-top: 30px;">
+            <h2 class="">Tin Tức</h2>
+            <div class="row">
+                <div class="col" style= "width: 100%; padding: 0; margin-right: 10px">
+                    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel" style="width: 100%; height: 340px">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner" style="height: 330px">
+                            <div class="carousel-item active" >
+                                <img src="./images/new/Ronaldo-tap.jpg" class="d-block" alt="..." style="width: 100%; height: 330px; border-radius: 5px;">
+                                <div class="carousel-caption d-none d-md-block" style="height: 100px">
+                                    <h5>First slide label</h5>
+                                    <p>Some representative placeholder content for the second slide.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item" >
+                                <img src="./images/new/messi.jpg" class="d-block" alt="..." style="width: 100%; height: 330px ;border-radius: 5px;">
+                                <div class="carousel-caption d-none d-md-block" style="height: 100px">
+                                    <h5>Second slide label</h5>
+                                    <p>Some representative placeholder content for the second slide.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./images/new/mbappe.jpg" class="d-block" alt="..."style="width: 100%; height: 330px; border-radius: 5px;">
+                                <div class="carousel-caption d-none d-md-block" style="height: 100px">
+                                    <h5>Third slide label</h5>
+                                    <p>Some representative placeholder content for the third slide.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <div class="col" style= "width: 100%;  margin-right: 10px; padding: 0;">
+                            <div class="vertical text-center">
+                                <div>
+                                    <div class="avatar">
+                                        <div class="gradient__avatar">
+                                            <img style="border-radius: 5px; width: 100%; height: 265px" src="./images/new/messi.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="list__name">
+                                        <h4 style="position: absolute; top: 200px; padding: 0 10px; font-size: 19px;">
+                                            Messi vượt qua thành tích của Maradona tại World Cup
+                                        </h4>
+                                    </div>
+                                </div>
+                                <i class="fa fa-three-dots"></i>
+                            </div>
+                        </div>
+                        <div class="col" style= "width: 100%; padding: 0;">
+                            <div class="vertical text-center">
+                                <div>
+                                    <div class="avatar">
+                                        <div class="gradient__avatar">
+                                            <img style="border-radius: 5px; width: 100%; height: 265px" src="./images/new/mbappe.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="list__name">
+                                        <h4 style="position: absolute; top: 200px; padding: 0 10px; font-size: 19px;">
+                                            Messi vượt qua thành tích của Maradona tại World Cup
+                                        </h4>
+                                    </div>
+                                </div>
+                                <i class="fa fa-three-dots"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row " style="margin-bottom: 20px;">
+                <div class="col" style="margin-right: 10px;">
+                    <div class="row">
+                        <div class="col" style= "width: 100%;  margin-right: 10px; padding: 0;">
+                            <div class="vertical text-center">
+                                <div>
+                                    <div class="avatar">
+                                        <div class="gradient__avatar">
+                                            <img style="border-radius: 5px; width: 100%; height: 250px" src="./images/new/phap-51222.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="list__name">
+                                        <h4 style="position: absolute; top: 200px; padding: 0 10px; font-size: 19px;">
+                                            Messi vượt qua thành tích của Maradona tại World Cup
+                                        </h4>
+                                    </div>
+                                </div>
+                                <i class="fa fa-three-dots"></i>
+                            </div>
+                        </div>
+                        <div class="col" style= "width: 100%; padding: 0;">
+                            <div class="vertical text-center">
+                                <div>
+                                    <div class="avatar">
+                                        <div class="gradient__avatar">
+                                            <img style="border-radius: 5px; width: 100%; height: 265px" src="./images/new/son-heung-min.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="list__name">
+                                        <h4 style="position: absolute; top: 200px; padding: 0 10px; font-size: 19px;">
+                                            Messi vượt qua thành tích của Maradona tại World Cup
+                                        </h4>
+                                    </div>
+                                </div>
+                                <i class="fa fa-three-dots"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" style= "width: 100%; padding: 0;">
+                    <div class="vertical text-center">
+                        <div>
+                            <div class="avatar">
+                                <div class="gradient__avatars">
+                                    <img style="border-radius: 5px; width: 100%; height: 330px" src="./images/new/32_đội_tuyển_dự_World_Cup_2022_tại_Qatar_(1).jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="list__name">
+                                <h4 style="position: absolute; top: 200px; padding: 0 10px; font-size: 19px;">
+                                    Messi vượt qua thành tích của Maradona tại World Cup
+                                </h4>
+                            </div>
+                        </div>
+                        <i class="fa fa-three-dots"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="row " style="padding-top: 20px; margin-bottom: 20px;">
+                <div class="col" style= "width: 100%;  margin-right: 10px; padding: 0;">
+                    <div class="vertical text-center">
+                        <div>
+                            <div class="avatar">
+                                <div class="gradient__avatar">
+                                    <img style="border-radius: 5px; width: 100%; height: 265px" src="./images/new/ronaldo-messi-293.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="list__name">
+                                <h4 style="position: absolute; top: 200px; padding: 0 10px; font-size: 19px;">
+                                    Messi vượt qua thành tích của Maradona tại World Cup
+                                </h4>
+                            </div>
+                        </div>
+                        <i class="fa fa-three-dots"></i>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <div class="col" style= "width: 100%;  margin-right: 10px; padding: 0;">
+                            <div class="vertical text-center">
+                                <div>
+                                    <div class="avatar">
+                                        <div class="gradient__avatar">
+                                            <img style="border-radius: 5px; width: 100%; height: 265px" src="./images/new/messi.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="list__name">
+                                        <h4 style="position: absolute; top: 200px; padding: 0 10px; font-size: 19px;">
+                                            Messi vượt qua thành tích của Maradona tại World Cup
+                                        </h4>
+                                    </div>
+                                </div>
+                                <i class="fa fa-three-dots"></i>
+                            </div>
+                        </div>
+                        <div class="col" style= "width: 100%; padding: 0;">
+                            <div class="vertical text-center">
+                                <div>
+                                    <div class="avatar">
+                                        <div class="gradient__avatar">
+                                            <img style="border-radius: 5px; width: 100%; height: 265px" src="./images/new/mbappe.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="list__name">
+                                        <h4 style="position: absolute; top: 200px; padding: 0 10px; font-size: 19px;">
+                                            Messi vượt qua thành tích của Maradona tại World Cup
+                                        </h4>
+                                    </div>
+                                </div>
+                                <i class="fa fa-three-dots"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row  d-flex" style="padding-top: 20px; margin-bottom: 40px">
+                <div class="col" style= "width: 100%;  margin-right: 10px; padding: 0;">
+                    <div class="vertical text-center">
+                        <div>
+                            <div class="avatar">
+                                <div class="gradient__avatar">
+                                    <img style="border-radius: 5px; width: 100%; height: 265px" src="./images/new/nhatban.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="list__name">
+                                <h4 style="position: absolute; top: 200px; padding: 0 10px; font-size: 19px;">
+                                    Messi vượt qua thành tích của Maradona tại World Cup
+                                </h4>
+                            </div>
+                        </div>
+                        <i class="fa fa-three-dots"></i>
+                    </div>
+                </div>
+                <div class="col" style= "width: 100%;  margin-right: 10px; padding: 0;">
+                    <div class="vertical text-center">
+                        <div>
+                            <div class="avatar">
+                                <div class="gradient__avatar">
+                                    <img style="border-radius: 5px; width: 100%; height: 265px" src="./images/new/griezmann.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="list__name">
+                                <h4 style="position: absolute; top: 200px; padding: 0 10px; font-size: 19px;">
+                                    Messi vượt qua thành tích của Maradona tại World Cup
+                                </h4>
+                            </div>
+                        </div>
+                        <i class="fa fa-three-dots"></i>
+                    </div>
+                </div>
+                <div class="col" style= "width: 100%;  margin-right: 10px; padding: 0;">
+                    <div class="vertical text-center">
+                        <div>
+                            <div class="avatar">
+                                <div class="gradient__avatar">
+                                    <img style="border-radius: 5px; width: 100%; height: 265px" src="./images/dt-anh.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="list__name">
+                                <h4 style="position: absolute; top: 200px; padding: 0 10px; font-size: 19px;">
+                                    Messi vượt qua thành tích của Maradona tại World Cup
+                                </h4>
+                            </div>
+                        </div>
+                        <i class="fa fa-three-dots"></i>
+                    </div>
+                </div>
+                <div class="col" style= "width: 100%; padding: 0;">
+                    <div class="vertical text-center">
+                        <div>
+                            <div class="avatar">
+                                <div class="gradient__avatar">
+                                    <img style="border-radius: 5px; width: 100%; height: 265px" src="./images/new/lukamoric.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="list__name">
+                                <h4 style="position: absolute; top: 200px; padding: 0 10px; font-size: 19px;">
+                                    Messi vượt qua thành tích của Maradona tại World Cup
+                                </h4>
+                            </div>
+                        </div>
+                        <i class="fa fa-three-dots"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="row  d-flex" style="margin-bottom: 40px">
+                <div class="col" style= "width: 100%;  margin-right: 10px; padding: 0;">
+                    <div class="vertical text-center">
+                        <div>
+                            <div class="avatar">
+                                <div class="gradient__avatar">
+                                    <img style="border-radius: 5px; width: 100%; height: 265px" src="./images/new/brazil-han.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="list__name">
+                                <h4 style="position: absolute; top: 200px; padding: 0 10px; font-size: 19px;">
+                                    Messi vượt qua thành tích của Maradona tại World Cup
+                                </h4>
+                            </div>
+                        </div>
+                        <i class="fa fa-three-dots"></i>
+                    </div>
+                </div>
+                <div class="col" style= "width: 100%;  margin-right: 10px; padding: 0;">
+                    <div class="vertical text-center">
+                        <div>
+                            <div class="avatar">
+                                <div class="gradient__avatar">
+                                    <img style="border-radius: 5px; width: 100%; height: 265px" src="./images/new/ronaldo-messi-293.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="list__name">
+                                <h4 style="position: absolute; top: 200px; padding: 0 10px; font-size: 19px;">
+                                    Messi vượt qua thành tích của Maradona tại World Cup
+                                </h4>
+                            </div>
+                        </div>
+                        <i class="fa fa-three-dots"></i>
+                    </div>
+                </div>
+                <div class="col" style= "width: 100%;  margin-right: 10px; padding: 0;">
+                    <div class="vertical text-center">
+                        <div>
+                            <div class="avatar">
+                                <div class="gradient__avatar">
+                                    <img style="border-radius: 5px; width: 100%; height: 265px" src="./images/new/Anh-Phap.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="list__name">
+                                <h4 style="position: absolute; top: 200px; padding: 0 10px; font-size: 19px;">
+                                    Messi vượt qua thành tích của Maradona tại World Cup
+                                </h4>
+                            </div>
+                        </div>
+                        <i class="fa fa-three-dots"></i>
+
+                    </div>
+                </div>
+                <div class="col" style= "width: 100%; padding: 0;">
+                    <div class="vertical text-center">
+                        <div>
+                            <div class="avatar">
+                                <div class="gradient__avatar">
+                                    <img style="border-radius: 5px; width: 100%; height: 265px" src="./images/new/AA14S4ge.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="list__name">
+                                <h4 style="position: absolute; top: 200px; padding: 0 10px; font-size: 19px;">
+                                    Messi vượt qua thành tích của Maradona tại World Cup
+                                </h4>
+                            </div>
+                        </div>
+                        <i class="fa fa-three-dots"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="row " style="margin-bottom: 20px">
+                <div class="col" style= "width: 100%; margin-right: 10px; padding: 0;">
+                    <div class="vertical text-center">
+                        <div>
+                            <div class="avatar">
+                                <div class="gradient__avatars">
+                                    <img style="border-radius: 5px; width: 100%; height: 330px" src="./images/new/all.png" alt="">
+                                </div>
+                            </div>
+                            <div class="list__name">
+                                <h4 style="position: absolute; top: 200px; padding: 0 10px; font-size: 19px;">
+                                    Messi vượt qua thành tích của Maradona tại World Cup
+                                </h4>
+                            </div>
+                        </div>
+                        <i class="fa fa-three-dots"></i>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <div class="col" style= "width: 100%;  margin-right: 10px; padding: 0;">
+                            <div class="vertical text-center">
+                                <div>
+                                    <div class="avatar">
+                                        <div class="gradient__avatar">
+                                            <img style="border-radius: 5px; width: 100%; height: 265px" src="./images/new/bo-dao-nha.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="list__name">
+                                        <h4 style="position: absolute; top: 200px; padding: 0 10px; font-size: 19px;">
+                                            Đội hình Bồ Đào Nha tại World Cup 2022 Qatar
+                                        </h4>
+                                    </div>
+                                </div>
+                                <i class="fa fa-three-dots"></i>
+                            </div>
+                        </div>
+                        <div class="col" style= "width: 100%; padding: 0;">
+                            <div class="vertical text-center">
+                                <div>
+                                    <div class="avatar">
+                                        <div class="gradient__avatar">
+                                            <img style="border-radius: 5px; width: 100%; height: 265px" src="./images/new/Australia.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="list__name">
+                                        <h4 style="position: absolute; top: 200px; padding: 0 10px; font-size: 19px;">
+                                            Đội hình Australia tại World Cup 2022 Qatar
+                                        </h4>
+                                    </div>
+                                </div>
+                                <i class="fa fa-three-dots"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row  d-flex" style="padding-top: 20px; margin-bottom: 20px">
+                <div class="col" style= "width: 100%;  margin-right: 10px; padding: 0;">
+                    <div class="vertical text-center">
+                        <div>
+                            <div class="avatar">
+                                <div class="gradient__avatar">
+                                    <img style="border-radius: 5px; width: 100%; height: 265px" src="./images/new/brazil%20(1).jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="list__name">
+                                <h4 style="position: absolute; top: 200px; padding: 0 10px; font-size: 19px;">
+                                    Đội hình Brazil tại World Cup 2022 Qatar
+                                </h4>
+                            </div>
+                        </div>
+                        <i class="fa fa-three-dots"></i>
+                    </div>
+                </div>
+                <div class="col" style= "width: 100%;  margin-right: 10px; padding: 0;">
+                    <div class="vertical text-center">
+                        <div>
+                            <div class="avatar">
+                                <div class="gradient__avatar">
+                                    <img style="border-radius: 5px; width: 100%; height: 265px" src="./images/new/Argentian.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="list__name">
+                                <h4 style="position: absolute; top: 200px; padding: 0 10px; font-size: 19px;">
+                                    Đội hình Argentian tại World Cup 2022 Qatar
+                                </h4>
+                            </div>
+                        </div>
+                        <i class="fa fa-three-dots"></i>
+                    </div>
+                </div>
+                <div class="col" style= "width: 100%;  margin-right: 10px; padding: 0;">
+                    <div class="vertical text-center">
+                        <div>
+                            <div class="avatar">
+                                <div class="gradient__avatar">
+                                    <img style="border-radius: 5px; width: 100%; height: 265px" src="./images/new/taybannha.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="list__name">
+                                <h4 style="position: absolute; top: 200px; padding: 0 10px; font-size: 19px;">
+                                    Đội hình Tây Ban Nha tại World Cup 2022 Qatar
+                                </h4>
+                            </div>
+                        </div>
+                        <i class="fa fa-three-dots"></i>
+                    </div>
+                </div>
+                <div class="col" style= "width: 100%; padding: 0;">
+                    <div class="vertical text-center">
+                        <div>
+                            <div class="avatar">
+                                <div class="gradient__avatar">
+                                    <img style="border-radius: 5px; width: 100%; height: 265px" src="./images/new/croatia.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="list__name">
+                                <h4 style="position: absolute; top: 200px; padding: 0 10px; font-size: 19px;">
+                                    Đội hình Croatia tại World Cup 2022 Qatar
+                                </h4>
+                            </div>
+                        </div>
+                        <i class="fa fa-three-dots"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="row  d-flex" style="padding-top: 20px; margin-bottom: 20px">
+                <div class="col" style= "width: 100%;  margin-right: 10px; padding: 0;">
+                    <div class="vertical text-center">
+                        <div>
+                            <div class="avatar">
+                                <div class="gradient__avatar">
+                                    <img style="border-radius: 5px; width: 100%; height: 265px" src="./images/new/nhat-ban-995.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="list__name">
+                                <h4 style="position: absolute; top: 200px; padding: 0 10px; font-size: 19px;">
+                                    Đội hình Nhật Bản tại World Cup 2022 Qatar
+                                </h4>
+                            </div>
+                        </div>
+                        <i class="fa fa-three-dots"></i>
+                    </div>
+                </div>
+                <div class="col" style= "width: 100%;  margin-right: 10px; padding: 0;">
+                    <div class="vertical text-center">
+                        <div>
+                            <div class="avatar">
+                                <div class="gradient__avatar">
+                                    <img style="border-radius: 5px; width: 100%; height: 265px" src="./images/new/phap.png" alt="">
+                                </div>
+                            </div>
+                            <div class="list__name">
+                                <h4 style="position: absolute; top: 200px; padding: 0 10px; font-size: 19px;">
+                                    Đội hình Pháp tại World Cup 2022 Qatar
+                                </h4>
+                            </div>
+                        </div>
+                        <i class="fa fa-three-dots"></i>
+                    </div>
+                </div>
+                <div class="col" style= "width: 100%;  margin-right: 10px; padding: 0;">
+                    <div class="vertical text-center">
+                        <div>
+                            <div class="avatar">
+                                <div class="gradient__avatar">
+                                    <img style="border-radius: 5px; width: 100%; height: 265px" src="./images/new/maroc.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="list__name">
+                                <h4 style="position: absolute; top: 200px; padding: 0 10px; font-size: 19px;">
+                                    Đội hình Ma Rốc tại World Cup 2022 Qatar
+                                </h4>
+                            </div>
+                        </div>
+                        <i class="fa fa-three-dots"></i>
+                    </div>
+                </div>
+                <div class="col" style= "width: 100%; padding: 0;">
+                    <div class="vertical text-center">
+                        <div>
+                            <div class="avatar">
+                                <div class="gradient__avatar">
+                                    <img style="border-radius: 5px; width: 100%; height: 265px" src="./images/new/balan.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="list__name">
+                                <h4 style="position: absolute; top: 200px; padding: 0 10px; font-size: 19px;">
+                                    Đội hình Ba Lan tại World Cup 2022 Qatar
+                                </h4>
+                            </div>
+                        </div>
+                        <i class="fa fa-three-dots"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="row 5 d-flex" style="padding-top: 20px; margin-bottom: 10px">
+                <div class="col" style= "width: 100%;  margin-right: 10px; padding: 0;">
+                    <div class="vertical text-center">
+                        <div>
+                            <div class="avatar">
+                                <div class="gradient__avatar">
+                                    <img style="border-radius: 5px; width: 100%; height: 265px" src="./images/new/thụy%20sĩ.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="list__name">
+                                <h4 style="position: absolute; top: 200px; padding: 0 10px; font-size: 19px;">
+                                    Đội hình Thụy Sĩ tại World Cup 2022 Qatar
+                                </h4>
+                            </div>
+                        </div>
+                        <i class="fa fa-three-dots"></i>
+                    </div>
+                </div>
+                <div class="col" style= "width: 100%;  margin-right: 10px; padding: 0;">
+                    <div class="vertical text-center">
+                        <div>
+                            <div class="avatar">
+                                <div class="gradient__avatar">
+                                    <img style="border-radius: 5px; width: 100%; height: 265px" src="./images/new/ha-lan.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="list__name">
+                                <h4 style="position: absolute; top: 200px; padding: 0 10px; font-size: 19px;">
+                                    Đội hình Hà Lan tại World Cup 2022 Qatar
+                                </h4>
+                            </div>
+                        </div>
+                        <i class="fa fa-three-dots"></i>
+                    </div>
+                </div>
+                <div class="col" style= "width: 100%;  margin-right: 10px; padding: 0;">
+                    <div class="vertical text-center">
+                        <div>
+                            <div class="avatar">
+                                <div class="gradient__avatar">
+                                    <img style="border-radius: 5px; width: 100%; height: 265px" src="./images/new/hanquoc.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="list__name">
+                                <h4 style="position: absolute; top: 200px; padding: 0 10px; font-size: 19px;">
+                                    Messi vượt qua thành tích của Maradona tại World Cup
+                                </h4>
+                            </div>
+                        </div>
+                        <i class="fa fa-three-dots"></i>
+                    </div>
+                </div>
+                <div class="col" style= "width: 100%; padding: 0;">
+                    <div class="vertical text-center">
+                        <div>
+                            <div class="avatar">
+                                <div class="gradient__avatar">
+                                    <img style="border-radius: 5px; width: 100%; height: 265px" src="./images/new/danmach.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="list__name">
+                                <h4 style="position: absolute; top: 200px; padding: 0 10px; font-size: 19px;">
+                                    Messi vượt qua thành tích của Maradona tại World Cup
+                                </h4>
+                            </div>
+                        </div>
+                        <i class="fa fa-three-dots"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

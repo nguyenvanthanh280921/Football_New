@@ -1,0 +1,46 @@
+.gradient-container {
+    height: 46px;
+    width: 100%;
+    border-radius: 6px 6px 0px 0px;
+    inset: 0px;
+    position: absolute;
+}
+
+.matchup-content {
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 70px;
+    background: rgb(198, 197, 203);
+    background: linear-gradient(90deg, rgba(198, 197, 203, 1) 0%, rgba(255, 255, 255, 1) 49%, rgba(198, 197, 203, 1) 100%);
+}
+
+/* Styles for wrapping the search box */
+
+.main {
+    margin: 15px 10px;
+    border-right: 2px solid #aaaaaa;
+    padding-right: 15px;
+}
+
+/* Bootstrap 4 text input with search icon */
+
+.has-search .form-control {
+    padding-left: 2.375rem;
+    border-radius: 20px;
+
+}
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}
